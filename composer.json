@@ -1,0 +1,22 @@
+{
+	"name": "peterwilsoncc/pwcc-multi-domain",
+	"description": "Multi-domain plugin for my personal website.",
+	"license": "GPL-2.0+",
+	"authors": [
+		{
+			"name": "Peter Wilson",
+			"email": "wilson@peterwilson.cc"
+		}
+	],
+	"type": "wordpress-muplugin",
+	"config": {
+		"preferred-install": "dist",
+		"sort-packages": true
+	},
+	"require": {
+		"composer/installers": "^1.9"
+	},
+	"require-dev": {
+		"humanmade/coding-standards": "^1.0"
+	}
+}
