@@ -1,5 +1,7 @@
 <?php
 /**
+ * Redirect URLs to preferred domain.
+ *
  * @package     PWCCMultiDomain
  * @author      Peter Wilson
  * @copyright   2018 Peter Wilson
@@ -36,7 +38,7 @@ function filter_template_redirect() {
 	}
 
 	if ( isset( $_SERVER['HTTP_HOST'] ) ) {
-		// build the URL in the address bar
+		// Build the URL in the address bar.
 		$requested_url  = is_ssl() ? 'https://' : 'http://';
 		$requested_url .= $_SERVER['HTTP_HOST'];
 		$requested_url .= $_SERVER['REQUEST_URI'];
@@ -67,6 +69,8 @@ function filter_template_redirect() {
 }
 
 /**
+ * Redirect the requested URL.
+ *
  * @param string $requested_url The URL requested by the visitor.
  */
 function front_page_redirect( string $requested_url ) {

@@ -1,5 +1,7 @@
 <?php
 /**
+ * Use multiple domains on a single WP Site.
+ *
  * @package     PWCCMultiDomain
  * @author      Peter Wilson
  * @copyright   2018 Peter Wilson
@@ -28,9 +30,10 @@ function bootstrap() {
 /**
  * Normalise URL to default when looking up post ID from URL.
  *
- * url_to_postid() fails when the home URL isn't the default,
- * so this returns sets the default URL before the query runs.
+ * The WP function url_to_postid() fails when the home URL isn't the default,
+ * so this sets the default URL before the query runs.
  *
+ * @param string $url URL used to search for post ID.
  * @return URL normalised to the default.
  */
 function filter_url_to_postid( $url ) {
@@ -60,8 +63,8 @@ function custom_home_urls() {
  *
  * Runs on the filter `allowed_redirect_hosts`.
  *
- * @param array $allowed_hosts
- * @return array
+ * @param array $allowed_hosts Hosts considered safe for redirect.
+ * @return array Hosts extended to include multiple-domains.
  */
 function allowed_hosts( $allowed_hosts ) {
 	// Combine post types and taxos.

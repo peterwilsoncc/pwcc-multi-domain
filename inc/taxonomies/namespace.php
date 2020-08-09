@@ -1,5 +1,7 @@
 <?php
 /**
+ * Manage multi-domain settings for taxonomy pages.
+ *
  * @package     PWCCMultiDomain
  * @author      Peter Wilson
  * @copyright   2018 Peter Wilson
@@ -76,9 +78,9 @@ function get_taxos_custom_home( string $taxonomy ) {
  * Runs on the following filters:
  * - term_link
  *
- * @param string $termlink Term link URL.
+ * @param string   $termlink Term link URL.
  * @param \WP_Term $term     Term object.
- * @param string $taxonomy Taxonomy slug.
+ * @param string   $taxonomy Taxonomy slug.
  */
 function filter_term_link( string $termlink, $term, $taxonomy ) {
 	$termlink_home = get_taxos_custom_home( $taxonomy );

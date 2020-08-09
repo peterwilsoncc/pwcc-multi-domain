@@ -1,5 +1,7 @@
 <?php
 /**
+ * Multi-domain functionality for peterwilson.cc
+ *
  * @package     PWCCMultiDomain
  * @author      Peter Wilson
  * @copyright   2018 Peter Wilson

@@ -13,4 +13,10 @@
 	<!-- Use HM Coding Standards -->
 	<rule ref="vendor/humanmade/coding-standards">
 	</rule>
+
+	<rule ref="WordPress.NamingConventions.ValidHookName">
+		<properties>
+			<property name="additionalWordDelimiters" value="/-."/>
+		</properties>
+	</rule>
 </ruleset>
